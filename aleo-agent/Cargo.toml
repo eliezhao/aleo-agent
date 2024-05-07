@@ -1,0 +1,28 @@
+[package]
+name = "aleo-agent"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+repository.workspace = true
+license.workspace = true
+rust-version.workspace = true
+description = "Agent library to communicate with the Aleo Blockchain, following the Public Specification."
+homepage = "https://docs.rs/"
+documentation = "https://docs.rs/aleo-agent"
+readme = "README.md"
+categories = ["api-bindings", "data-structures", "no-std"]
+keywords = ["aleo", "agent", "AleoHQ", "aleo-rs"]
+include = ["src", "Cargo.toml", "README.md"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = { workspace = true }
+rand = { workspace = true }
+rand_chacha = { workspace = true }
+thiserror = { workspace = true }
+snarkvm = { workspace = true }
+
+ureq = "2.9.6"
+indexmap = "2"
+once_cell = "1"

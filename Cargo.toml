@@ -1,0 +1,29 @@
+[workspace]
+resolver = "2"
+members = [
+    "aleo-agent",
+    "examples/deploy",
+    "examples/transfer"
+]
+
+[workspace.package]
+version = "1.0.0-alpha"
+authors = ["Essen <czgelite@gmail.com>"]
+edition = "2021"
+repository = "https://github.com/C-B-Elite/aleo-agent"
+rust-version = "1.78.0"
+license = "Apache-2.0"
+
+[workspace.dependencies]
+aleo-agent = { path = "aleo-agent" }
+
+anyhow = "1"
+rand = "0.8.5"
+rand_chacha = "0.3"
+thiserror = "1"
+
+[workspace.dependencies.snarkvm]
+git = "https://github.com/AleoHQ/snarkVM.git"
+rev = "f761d1e"
+#version = "=0.16.18"
+features = ["circuit", "console", "rocks"]

@@ -1,0 +1,15 @@
+[package]
+name = "deploy"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+aleo-agent = { workspace = true }
+anyhow = {workspace = true }
+snarkvm = { workspace = true }
