@@ -11,13 +11,11 @@ I use `cargo` to build this repo. Make sure you have rust stable installed. To b
 cargo build
 ```
 
-## Docs
-
 ## Release
 To release, increase the version number in all crates and run `cargo build` to update the lock file.
 
 ## Docs
-Generate usage documentation using cargo or check [crates.io]()
+Generate usage documentation using cargo or check [crates.io](https://crates.io/crates/aleo-agent)
 
 ```shell
 cargo doc --no-deps --open
