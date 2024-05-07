@@ -25,5 +25,5 @@ thiserror = "1"
 [workspace.dependencies.snarkvm]
 git = "https://github.com/AleoHQ/snarkVM.git"
 rev = "f761d1e"
-#version = "=0.16.18"
+version = "0.16.19"
 features = ["circuit", "console", "rocks"]
