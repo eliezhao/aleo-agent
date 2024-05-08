@@ -36,11 +36,11 @@
 //!     let recipient_address = Address::from_str(recipient_address).expect("Invalid recipient address");
 //!     // transfer 1 credit to recipient_address
 //!     let transfer_args = TransferArgs::from(
-//!         MICROCREDITS, // 1 credit
+//!         MICROCREDITS, // transfer 1 credit
 //!         recipient_address,
-//!         1,
-//!         None,
-//!         TransferType::Public,
+//!         1, // priority fee
+//!         None, // no record, using public balance
+//!         TransferType::Public, // transfer 1 credit using public balance
 //!     );
 //!     let tx_hash = agent.transfer(transfer_args)?;
 //!     println!("Transfer tx hash: {}", tx_hash);
