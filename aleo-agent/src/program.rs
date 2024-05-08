@@ -16,6 +16,7 @@ use indexmap::IndexMap;
 
 use super::*;
 
+#[derive(Clone)]
 pub struct ProgramManager<'agent> {
     agent: &'agent Agent,
     program_id: ProgramID,

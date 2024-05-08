@@ -4,6 +4,7 @@ use crate::account::Account;
 use crate::agent::Agent;
 use crate::{DEFAULT_BASE_URL, DEFAULT_TESTNET};
 
+#[derive(Clone)]
 pub struct AgentBuilder {
     url: String,
     network: String,
