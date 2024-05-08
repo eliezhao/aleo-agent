@@ -7,7 +7,7 @@ members = [
 ]
 
 [workspace.package]
-version = "1.0.0-alpha"
+version = "1.0.1"
 authors = ["Essen <czgelite@gmail.com>"]
 edition = "2021"
 repository = "https://github.com/C-B-Elite/aleo-agent"
@@ -15,7 +15,7 @@ rust-version = "1.78.0"
 license = "Apache-2.0"
 
 [workspace.dependencies]
-aleo-agent = { path = "aleo-agent", version = "1.0.0-alpha" }
+aleo-agent = { path = "aleo-agent", version = "1.0.1" }
 
 anyhow = "1"
 rand = "0.8.5"

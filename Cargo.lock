@@ -40,7 +40,7 @@ dependencies = [
 
 [[package]]
 name = "aleo-agent"
-version = "1.0.0-alpha"
+version = "1.0.1"
 dependencies = [
  "anyhow",
  "indexmap",
@@ -558,7 +558,7 @@ dependencies = [
 
 [[package]]
 name = "deploy"
-version = "1.0.0-alpha"
+version = "1.0.1"
 dependencies = [
  "aleo-agent",
  "anyhow",
@@ -2919,7 +2919,7 @@ dependencies = [
 
 [[package]]
 name = "transfer"
-version = "1.0.0-alpha"
+version = "1.0.1"
 dependencies = [
  "aleo-agent",
  "anyhow",
