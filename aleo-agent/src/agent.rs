@@ -15,6 +15,7 @@ use crate::{
     DEFAULT_TESTNET, VM,
 };
 
+#[derive(Clone)]
 pub struct Agent {
     client: ureq::Agent,
     base_url: String,
