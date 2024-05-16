@@ -58,10 +58,10 @@
 //! - [SnarkVM](https://github.com/AleoHQ/snarkVM)
 //! - [Aleo Developer Guide](https://developer.aleo.org/getting_started/)
 
-pub use snarkvm::console::{
-    network::Testnet3,
-    prelude::Uniform,
-    program::{Entry, Literal, Network, Record},
+pub use snarkvm::prelude::{
+    TestnetV0,
+    Uniform,
+    Entry,Literal,Network,Record
 };
 pub use snarkvm::ledger::store::helpers::memory::BlockMemory;
 
@@ -73,7 +73,7 @@ pub mod deploy;
 pub mod program;
 
 // GLOBAL DECLARATIONS
-pub type CurrentNetwork = Testnet3;
+pub type CurrentNetwork = TestnetV0;
 pub type TransactionID = <CurrentNetwork as Network>::TransactionID;
 pub type CiphertextRecord = Record<CurrentNetwork, Ciphertext>;
 pub type PlaintextRecord = Record<CurrentNetwork, Plaintext>;
@@ -102,6 +102,6 @@ pub type Program = snarkvm::synthesizer::Program<CurrentNetwork>;
 pub type Package = snarkvm::package::Package<CurrentNetwork>;
 
 pub const DEFAULT_BASE_URL: &str = "https://api.explorer.aleo.org/v1";
-pub const DEFAULT_TESTNET: &str = "testnet3";
+pub const DEFAULT_TESTNET: &str = "testnet";
 pub const MAINNET: &str = "mainnet";
 pub const MICROCREDITS: u64 = 1_000_000; // 1 credit = 1_000_000 microcredits
