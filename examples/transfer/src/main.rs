@@ -5,6 +5,7 @@ use anyhow::Result;
 use std::str::FromStr;
 
 fn main() -> Result<()> {
+    
     // private key format: APrivateKey1zkp...
     let alice_key = "Alice PRIVATE KEY";
     let alice_account = Account::from_private_key(alice_key)?;

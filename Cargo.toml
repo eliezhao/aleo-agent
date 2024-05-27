@@ -7,7 +7,7 @@ members = [
 ]
 
 [workspace.package]
-version = "1.0.1"
+version = "1.1.0"
 authors = ["Essen <czgelite@gmail.com>"]
 edition = "2021"
 repository = "https://github.com/C-B-Elite/aleo-agent"
@@ -23,7 +23,7 @@ rand_chacha = "0.3"
 thiserror = "1"
 
 [workspace.dependencies.snarkvm]
-git = "https://github.com/AleoHQ/snarkVM.git"
-rev = "f761d1e"
-version = "0.16.19"
+git = "https://github.com/AleoNet/snarkVM.git"
+rev = "393b8fb"
+#version = "0.16.19"
 features = ["circuit", "console", "rocks"]
