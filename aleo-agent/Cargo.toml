@@ -6,15 +6,13 @@ edition.workspace = true
 repository.workspace = true
 license.workspace = true
 rust-version.workspace = true
-description = "Agent library to communicate with the Aleo Blockchain, following the Public Specification."
+description = "Agent library to communicate with the Aleo Network"
 homepage = "https://crates.io/crates/aleo-agent"
 documentation = "https://docs.rs/aleo-agent/latest/aleo_agent"
 readme = "README.md"
 categories = ["api-bindings", "data-structures", "no-std"]
 keywords = ["aleo", "agent", "AleoHQ", "aleo-agent", "rust"]
 include = ["src", "Cargo.toml", "README.md"]
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 anyhow = { workspace = true }
