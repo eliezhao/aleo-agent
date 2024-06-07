@@ -15,7 +15,7 @@ cargo build
 To release, increase the version number in all crates and run `cargo build` to update the lock file.
 
 ## Docs
-Generate usage documentation using cargo or check [crates.io](https://crates.io/crates/aleo-agent)
+Generate usage documentation using cargo or check [docs.rs](https://docs.rs/aleo-agent/latest/aleo_agent/)
 
 ```shell
 cargo doc --no-deps --open
