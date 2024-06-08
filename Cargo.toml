@@ -25,5 +25,5 @@ thiserror = "1"
 [workspace.dependencies.snarkvm]
 git = "https://github.com/AleoNet/snarkVM.git"
 branch = "mainnet-staging"
-#version = "0.16.19"
+version = "0.16.19"
 features = ["circuit", "console", "rocks"]

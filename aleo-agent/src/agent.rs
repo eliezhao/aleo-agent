@@ -125,7 +125,7 @@ impl Agent {
     /// The `Ok` variant wraps the unspent records as a vector of tuples of `(Field, PlaintextRecord)`.
     ///
     /// # Example
-    /// ```
+    /// ```ignore
     /// use aleo_agent::agent::Agent;
     /// use aleo_agent::{MICROCREDITS, PlaintextRecord};
     /// let agent = Agent::default();

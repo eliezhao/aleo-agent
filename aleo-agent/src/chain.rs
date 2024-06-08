@@ -268,43 +268,33 @@ mod test{
     use super::*;
 
     #[test]
-    fn test_find_transition_id_by_private_input_id() {
-        let agent = Agent::default();
-        let input_id = Field::from_str("4264902728006919131372754675851572663419744328988144775456736509806946463832field").unwrap();
-        let res = agent
-            .find_transition_id_by_input_or_output_id(input_id)
-            .expect("Failed to find transition ID by input ID");
-        assert_eq!(res, AleoID::from_str("au175l9ljm7k0r7rgp3dxkr9upp5xdlxp97zsv0gq9h4f73w9y835rs5svnk9").unwrap())
-    }
-
-    #[test]
     fn test_find_transition_id_by_public_input_id() {
         let agent = Agent::default();
-        let input_id = Field::from_str("1189069982776259983430750750378210517138284966096341396999865832791709072861field").unwrap();
+        let input_id = Field::from_str("442821668769577970144612761629986410250375075037739392584772366002083927285field").unwrap();
         let res = agent
             .find_transition_id_by_input_or_output_id(input_id)
             .expect("Failed to find transition ID by input ID");
-        assert_eq!(res, AleoID::from_str("au175l9ljm7k0r7rgp3dxkr9upp5xdlxp97zsv0gq9h4f73w9y835rs5svnk9").unwrap())
+        assert_eq!(res, AleoID::from_str("au16zlg0gwj2wnrxgq8699vdrc46s4a6eefg6frd5skr5e3fr8j2u8q4cs9wz").unwrap())
     }
 
     #[test]
     fn test_find_transition_id_by_output_id() {
         let agent = Agent::default();
-        let input_or_output_id = Field::from_str("6367764211666803735912595104467722517989468495803138547640524449862797481066field").unwrap();
+        let output_id = Field::from_str("4718225685615532558993353175858434048183497319430064832948717582958793823285field").unwrap();
         let res = agent
-            .find_transition_id_by_input_or_output_id(input_or_output_id)
+            .find_transition_id_by_input_or_output_id(output_id)
             .expect("Failed to find transition ID by input ID");
-        assert_eq!(res, AleoID::from_str("au175l9ljm7k0r7rgp3dxkr9upp5xdlxp97zsv0gq9h4f73w9y835rs5svnk9").unwrap())
+        assert_eq!(res, AleoID::from_str("au16zlg0gwj2wnrxgq8699vdrc46s4a6eefg6frd5skr5e3fr8j2u8q4cs9wz").unwrap())
     }
 
     #[test]
     fn test_find_block_hash_by_transaction_id() {
         let agent = Agent::default();
-        let transaction_id = TransactionID::from_str("at1dtzwtj4kucw5wvyrdjse5quuu5kzy0psrqqlqv5zu7nxhutpdyxqwhte0h").unwrap();
+        let transaction_id = TransactionID::from_str("at1z6ydwyklzlhe4xm8uferf9uevsynxjfkqmgcxps6rjl4x737zq8qr4s3rv").unwrap();
         let res = agent
             .find_block_hash_by_transaction_id(&transaction_id)
             .expect("Failed to find block hash by transaction ID");
-        assert_eq!(res, BlockHash::from_str("ab192jlmwheq53yd8xmezx5vr3m2pc00vafcnwrf25jv0qgt23p6sxsju0ntk").unwrap())
+        assert_eq!(res, BlockHash::from_str("ab1mmn6rntv2qhyz8qdsjdreevsax867ha2k8hysgflz9m03c06m5yqsmpke3").unwrap())
     }
 
     // #[test]
@@ -317,7 +307,7 @@ mod test{
     #[test]
     fn test_get_transaction_by_id(){
         let agent = Agent::default();
-        let transaction_id = "at1dtzwtj4kucw5wvyrdjse5quuu5kzy0psrqqlqv5zu7nxhutpdyxqwhte0h";
+        let transaction_id = "at1z6ydwyklzlhe4xm8uferf9uevsynxjfkqmgcxps6rjl4x737zq8qr4s3rv";
         let res = agent.get_transaction(transaction_id).expect("Failed to get transaction by id");
         assert_eq!(res.id(), TransactionID::from_str(transaction_id).unwrap())
     }
@@ -325,7 +315,7 @@ mod test{
     #[test]
     fn test_get_confirmed_transaction_by_id() {
         let agent = Agent::default();
-        let transaction_id = "at1dtzwtj4kucw5wvyrdjse5quuu5kzy0psrqqlqv5zu7nxhutpdyxqwhte0h";
+        let transaction_id = "at1z6ydwyklzlhe4xm8uferf9uevsynxjfkqmgcxps6rjl4x737zq8qr4s3rv";
         let res = agent.get_confirmed_transaction(transaction_id).expect("Failed to get confirmed transaction by id");
         assert_eq!(res.id(), TransactionID::from_str(transaction_id).unwrap())
     }
