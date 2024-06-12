@@ -195,7 +195,7 @@ impl<'agent> ProgramManager<'agent> {
             "{}/{}/program/{}/mapping/{mapping_name}/{key}",
             self.agent().base_url(),
             self.agent().network(),
-            program_id.name(),
+            program_id.to_string(),
         );
         match self.agent().client().get(&url).call()?.into_json() {
             Ok(transition_id) => Ok(transition_id),
@@ -212,7 +212,7 @@ impl<'agent> ProgramManager<'agent> {
             "{}/{}/program/{}/mappings",
             self.agent().base_url(),
             self.agent().network(),
-            program_id.name()
+            program_id.to_string()
         );
         match self.agent().client().get(&url).call()?.into_json() {
             Ok(program_mappings) => Ok(program_mappings),
@@ -229,7 +229,7 @@ impl<'agent> ProgramManager<'agent> {
         // Perform the request.
         let url = format!(
             "{}/{}/program/{}",
-            DEFAULT_BASE_URL, DEFAULT_TESTNET, program_id.name()
+            DEFAULT_BASE_URL, DEFAULT_TESTNET, program_id.to_string()
         );
         match client.get(&url).call()?.into_json() {
             Ok(program) => Ok(program),
