@@ -19,7 +19,10 @@ anyhow = { workspace = true }
 rand = { workspace = true }
 rand_chacha = { workspace = true }
 thiserror = { workspace = true }
-snarkvm = { workspace = true }
+
+[dependencies.snarkvm]
+git = "https://github.com/AleoNet/snarkVM.git"
+branch = "mainnet"
 
 ureq = "2.9.6"
 indexmap = "2"
