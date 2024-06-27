@@ -13,3 +13,4 @@ license.workspace = true
 aleo-agent = { workspace = true }
 anyhow = {workspace = true }
 snarkvm = { workspace = true }
+log = "0.4.21"

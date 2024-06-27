@@ -24,6 +24,6 @@ thiserror = "1"
 
 [workspace.dependencies.snarkvm]
 git = "https://github.com/AleoNet/snarkVM.git"
-rev = "393b8fb"
+branch = "mainnet"
 #version = "0.16.19"
 features = ["circuit", "console", "rocks"]
